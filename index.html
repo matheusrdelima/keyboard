@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Keyboard</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="screen">
+        <p id="resultado"></p>
+      </div>
+      
+      <table>
+        <tr>
+          <td><button class="botao" onclick="back()">APAGAR</button></td>
+          <td><button class="botao" onclick="insert(' ')">ESPAÇO</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('A')">A</button></td>
+          <td><button class="botao" onclick="insert('B')">B</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('C')">C</button></td>
+          <td><button class="botao" onclick="insert('D')">D</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('E')">E</button></td>
+          <td><button class="botao" onclick="insert('F')">F</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('G')">G</button></td>
+          <td><button class="botao" onclick="insert('H')">H</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('I')">I</button></td>
+          <td><button class="botao" onclick="insert('J')">J</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('K')">K</button></td>
+          <td><button class="botao" onclick="insert('L')">L</button></td>
+        </tr>          
+        <tr>
+          <td><button class="botao" onclick="insert('M')">M</button></td>
+          <td><button class="botao" onclick="insert('N')">N</button></td>
+        </tr>                    
+        <tr>
+          <td><button class="botao" onclick="insert('O')">O</button></td>
+          <td><button class="botao" onclick="insert('P')">P</button></td>
+        </tr>                    
+        <tr>
+          <td><button class="botao" onclick="insert('Q')">Q</button></td>
+          <td><button class="botao" onclick="insert('R')">R</button></td>
+        </tr>        
+        <tr>
+          <td><button class="botao" onclick="insert('S')">S</button></td>
+          <td><button class="botao" onclick="insert('T')">T</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('U')">U</button></td>
+          <td><button class="botao" onclick="insert('V')">V</button></td>
+        </tr>                                                  
+        <tr>
+          <td><button class="botao" onclick="insert('W')">W</button></td>
+          <td><button class="botao" onclick="insert('X')">X</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" onclick="insert('Y')">Y</button></td>
+          <td><button class="botao" onclick="insert('Z')">Z</button></td>
+        </tr>                                                                      
+      </table>
+    </div>
+  </main>
+
+ <script>
+   function insert(letter) {
+      var key = document.getElementById('resultado').innerHTML;
+      document.getElementById('resultado').innerHTML = key + letter;
+    }
+
+    function back() {
+      var resultado = document.getElementById('resultado').innerHTML;
+      document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+    }
+
+ </script>
+</body>
+</html>
